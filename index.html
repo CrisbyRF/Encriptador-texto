@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alura Challenge</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="main">
+    <header class="header">
+        <div class="imagenes_header">
+            <img src="./img/planta.png" class="imagenes_header_izquierda" />
+            <img src="./img/planta.png" class="imagenes_header_derecha" />
+        </div>
+        <h2 class="header_titulo">Encriptador de texto</h2>
+        <div class="contenido_principal">
+            <section class="contenido_principal_encriptar">
+                <textarea class="contenido_principal_input" id="input-user"
+                    placeholder="Ingresa el texto que deseas encriptar" autocomplete="off" autocorrect="off"
+                    autocapitalize="off" spellcheck="false"></textarea>
+                <div class="alerta_mayusculas">
+                    <img src='./img/alerta-icono.png' class="alerta_icono" />
+                    <p>Solo letras minúsculas y sin acentos</p>
+                </div>
+                <div class="contenido_principal_botones">
+                    <button id="boton_encriptar" onclick="encriptarTexto()" enabled>Encriptar</button>
+                    <button id="boton_desencriptar" onclick="desencriptarTexto()" disabled>Desencriptar</button>
+                </div>
+            </section>
+            <section class="seccion_encriptado">
+                <h2 class="seccion_encriptado_titulo" id="titulo_texto_encriptado" hidden>Texto encriptado</h2>
+                <div id="texto_encriptado">
+                    <a class="texto_encriptado_parrafo">¡Ningún mensaje fue encontrado!</a>
+                    <img src="./img/planeta.webp" class="texto_encriptado_imagen" />
+                    <p class="texto_encriptado_parrafo" id="texto_encriptado_parrafo"></p>
+                </div>
+                <button class="boton_copiar_texto" id="boton-copiar" hidden>Copiar texto</button>
+            </section>
+        </div>
+        <footer class="footer">
+            <a>©2024 | Desarrollado por Cristóbal Rey</a>
+        </footer>
+        <div class="alerta_en_pantalla" id="error_en_pantalla">
+            <div class="mensaje_error">
+                <h2>ERROR</h2>
+                <p id="error_en_pantalla_mensaje">No se permiten mayúsculas ni acentos, inténtelo de nuevo</p>
+                <button onclick="cerrarMensaje()">Aceptar</button>
+            </div>
+
+            <script src="./main/main.js"></script>
+</body>
+
+</html>
